@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:gravity="center_vertical|center_horizontal">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Name"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:id="@+id/id_tv_name"
+		android:layout_marginBottom="15dp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="example@email.com"
+		android:id="@+id/id_tv_email"
+		android:layout_marginBottom="100dp"/>
+
+	<ProgressBar
+		android:layout_width="wrap_content"
+		style="?android:attr/progressBarStyleLarge"
+		android:layout_height="wrap_content"
+		android:id="@+id/id_pb"
+		android:visibility="gone"/>
+
+	<com.google.android.gms.common.SignInButton
+		android:id="@+id/id_btn_signIn"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Sign out"
+		android:id="@+id/id_btn_signOut"
+		android:layout_marginTop="10dp"
+		android:visibility="gone"/>
+
+</LinearLayout>
+
