@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+		
+		<EditText
+				android:id="@+id/id_edtv_word"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Word"/>
+		<EditText
+				android:id="@+id/id_edtv_meaning"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Meaning"/>
+		<EditText
+				android:id="@+id/id_edtv_desc"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Description"/>
+		<ProgressBar
+				android:id="@+id/id_pb_save"
+				android:visibility="gone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+		
+		<Button
+				android:id="@+id/id_btn_save"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Save"/>
+		<Button
+				android:id="@+id/id_btn_get"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Get"/>
+		<TextView
+				android:id="@+id/id_tv_wordData"
+				android:layout_marginTop="10dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Word"/>
+		
+	
+		
+
+    
+</LinearLayout>

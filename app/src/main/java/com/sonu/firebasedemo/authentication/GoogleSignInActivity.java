@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.*;
 import com.google.android.gms.common.api.*;
 import android.widget.*;
 import com.google.android.gms.common.SignInButton;
+import com.sonu.firebasedemo.database.*;
 
 public class GoogleSignInActivity extends AppCompatActivity
 implements View.OnClickListener{
@@ -27,7 +28,7 @@ implements View.OnClickListener{
 	private final int RC_SIGN_IN=123;
 	private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-	Button signOutButton;
+	Button signOutButton,btnRealtimeDatabase;
 	SignInButton signInButton;
 	TextView tvName,tvEmail;
 	ProgressBar pb;
@@ -39,6 +40,7 @@ implements View.OnClickListener{
 		signInButton=findViewById(R.id.id_btn_signIn);
 		signOutButton=findViewById(R.id.id_btn_signOut);
 		tvName=findViewById(R.id.id_tv_name);
+		btnRealtimeDatabase=findViewById(R.id.id_btn_realtimeDatabase);
 		tvEmail=findViewById(R.id.id_tv_email);
 		pb=findViewById(R.id.id_pb);
 		mAuth = FirebaseAuth.getInstance();
@@ -46,6 +48,7 @@ implements View.OnClickListener{
 		//set listeners
 		signInButton.setOnClickListener(this);
 		signOutButton.setOnClickListener(this);
+		btnRealtimeDatabase.setOnClickListener(this);
 		
 		// Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -67,6 +70,10 @@ implements View.OnClickListener{
 			case R.id.id_btn_signOut:
 				signOut();
 				break;
+			case R.id.id_btn_realtimeDatabase:
+					startActivity(new Intent(GoogleSignInActivity.this,
+					RealtimeDatabaseActivity.class));
+					break;
 		}
 	}
 
